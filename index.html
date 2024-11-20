@@ -617,13 +617,13 @@ m-1234 -68 c46 -31 223 -146 392 -256 276 -179 311 -199 332 -190 23 11 117
 			}
 		}
 
-		function initWebSocket() {
-			console.log('Trying to open a WebSocket connection…')
-			websocket = new WebSocket(gateway)
-			websocket.onopen = onOpen
-			websocket.onclose = onClose
-			websocket.onmessage = onMessage
-		}
+		// function initWebSocket() {
+		// 	console.log('Trying to open a WebSocket connection…')
+		// 	websocket = new WebSocket(gateway)
+		// 	websocket.onopen = onOpen
+		// 	websocket.onclose = onClose
+		// 	websocket.onmessage = onMessage
+		// }
 
 		function onOpen(event) {
 			console.log('Connection opened')
