@@ -498,27 +498,27 @@ m-1234 -68 c46 -31 223 -146 392 -256 276 -179 311 -199 332 -190 23 11 117
 				const DIAG = Math.round((coordXSend ** 2 + coordYSend ** 2) ** 0.5)
 				const noDIAG = Math.round(DIAG / K)
 				// console.log(`${MOVE[0]} ${MOVE[1]}`)
-				if (
-					(MOVE[0] === 'ВПЕРЁД' || MOVE[0] === 'НАЗАД') &&
-					MOVE[1] === 'РОВНО'
-				) {
-					SEND(coordYSend, coordYSend)
-				} else if (MOVE[1] === 'ВПРАВО' && MOVE[0] === 'НАЗАД') {
-					SEND(-DIAG, -noDIAG)
-				} else if (MOVE[1] === 'ВПРАВО' && MOVE[0] === 'ВПЕРЁД') {
-					SEND(DIAG, noDIAG)
-				} else if (MOVE[1] === 'ВЛЕВО' && MOVE[0] === 'НАЗАД') {
-					SEND(-noDIAG, -DIAG)
-				} else if (MOVE[1] === 'ВЛЕВО' && MOVE[0] === 'ВПЕРЁД') {
-					SEND(noDIAG, DIAG)
-				}
+				// if (
+				// 	(MOVE[0] === 'ВПЕРЁД' || MOVE[0] === 'НАЗАД') &&
+				// 	MOVE[1] === 'РОВНО'
+				// ) {
+				// 	SEND(coordYSend, coordYSend)
+				// } else if (MOVE[1] === 'ВПРАВО' && MOVE[0] === 'НАЗАД') {
+				// 	SEND(-DIAG, -noDIAG)
+				// } else if (MOVE[1] === 'ВПРАВО' && MOVE[0] === 'ВПЕРЁД') {
+				// 	SEND(DIAG, noDIAG)
+				// } else if (MOVE[1] === 'ВЛЕВО' && MOVE[0] === 'НАЗАД') {
+				// 	SEND(-noDIAG, -DIAG)
+				// } else if (MOVE[1] === 'ВЛЕВО' && MOVE[0] === 'ВПЕРЁД') {
+				// 	SEND(noDIAG, DIAG)
+				// }
 
-				if (
-					(MOVE[1] === 'ВПРАВО' || MOVE[1] === 'ВЛЕВО') &&
-					MOVE[0] === 'РОВНО'
-				) {
-					SEND(coordXSend, -coordXSend)
-				}
+				// if (
+				// 	(MOVE[1] === 'ВПРАВО' || MOVE[1] === 'ВЛЕВО') &&
+				// 	MOVE[0] === 'РОВНО'
+				// ) {
+				// 	SEND(coordXSend, -coordXSend)
+				// }
 
 				var coords = calculateCoords(ev.angle, ev.distance)
 
