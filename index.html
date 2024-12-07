@@ -818,15 +818,15 @@ m-1234 -68 c46 -31 223 -146 392 -256 276 -179 311 -199 332 -190 23 11 117
 		})
 
 		$(document).ready(function () {
-			$('.side').on('mousedown', function () {
+			$('.side').on('mousedown touchstart', function () {
 				$('body').addClass('grabbing')
 				thumb = true
 			})
-			$(document).on('mouseup', function () {
+			$(document).on('mouseup touchend', function () {
 				$('body').removeClass('grabbing')
 				thumb = false
 			})
-			$(document).on('mousemove', function (e) {
+			$(document).on('mousemove touchmove', function (e) {
 				mouse.x = e.clientX
 				mouse.y = e.clientY
 			})
