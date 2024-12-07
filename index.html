@@ -827,8 +827,18 @@ m-1234 -68 c46 -31 223 -146 392 -256 276 -179 311 -199 332 -190 23 11 117
 				thumb = false
 			})
 			$(document).on('mousemove touchmove', function (e) {
-				mouse.x = e.clientX
-				mouse.y = e.clientY
+				// Проверяем, является ли событие касанием
+				if (e.type === 'touchmove') {
+					// Получаем координаты касания
+					const touch =
+						e.originalEvent.touches[0] || e.originalEvent.changedTouches[0]
+					mouse.x = touch.clientX
+					mouse.y = touch.clientY
+				} else {
+					// Получаем координаты мыши
+					mouse.x = e.clientX
+					mouse.y = e.clientY
+				}
 			})
 			requestAnimationFrame(animate)
 			drawJoystick()
